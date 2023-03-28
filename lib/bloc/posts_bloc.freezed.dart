@@ -20,18 +20,21 @@ mixin _$PostsEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getPosts,
+    required TResult Function() addPosts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getPosts,
+    TResult? Function()? addPosts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getPosts,
+    TResult Function()? addPosts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$PostsEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(GetPosts value) getPosts,
+    required TResult Function(AddPosts value) addPosts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(GetPosts value)? getPosts,
+    TResult? Function(AddPosts value)? addPosts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(GetPosts value)? getPosts,
+    TResult Function(AddPosts value)? addPosts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,6 +119,7 @@ class _$_Started implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getPosts,
+    required TResult Function() addPosts,
   }) {
     return started();
   }
@@ -122,6 +129,7 @@ class _$_Started implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getPosts,
+    TResult? Function()? addPosts,
   }) {
     return started?.call();
   }
@@ -131,6 +139,7 @@ class _$_Started implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getPosts,
+    TResult Function()? addPosts,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -144,6 +153,7 @@ class _$_Started implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(GetPosts value) getPosts,
+    required TResult Function(AddPosts value) addPosts,
   }) {
     return started(this);
   }
@@ -153,6 +163,7 @@ class _$_Started implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(GetPosts value)? getPosts,
+    TResult? Function(AddPosts value)? addPosts,
   }) {
     return started?.call(this);
   }
@@ -162,6 +173,7 @@ class _$_Started implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(GetPosts value)? getPosts,
+    TResult Function(AddPosts value)? addPosts,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -214,6 +226,7 @@ class _$GetPosts implements GetPosts {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getPosts,
+    required TResult Function() addPosts,
   }) {
     return getPosts();
   }
@@ -223,6 +236,7 @@ class _$GetPosts implements GetPosts {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getPosts,
+    TResult? Function()? addPosts,
   }) {
     return getPosts?.call();
   }
@@ -232,6 +246,7 @@ class _$GetPosts implements GetPosts {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getPosts,
+    TResult Function()? addPosts,
     required TResult orElse(),
   }) {
     if (getPosts != null) {
@@ -245,6 +260,7 @@ class _$GetPosts implements GetPosts {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(GetPosts value) getPosts,
+    required TResult Function(AddPosts value) addPosts,
   }) {
     return getPosts(this);
   }
@@ -254,6 +270,7 @@ class _$GetPosts implements GetPosts {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(GetPosts value)? getPosts,
+    TResult? Function(AddPosts value)? addPosts,
   }) {
     return getPosts?.call(this);
   }
@@ -263,6 +280,7 @@ class _$GetPosts implements GetPosts {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(GetPosts value)? getPosts,
+    TResult Function(AddPosts value)? addPosts,
     required TResult orElse(),
   }) {
     if (getPosts != null) {
@@ -274,6 +292,113 @@ class _$GetPosts implements GetPosts {
 
 abstract class GetPosts implements PostsEvent {
   const factory GetPosts() = _$GetPosts;
+}
+
+/// @nodoc
+abstract class _$$AddPostsCopyWith<$Res> {
+  factory _$$AddPostsCopyWith(
+          _$AddPosts value, $Res Function(_$AddPosts) then) =
+      __$$AddPostsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddPostsCopyWithImpl<$Res>
+    extends _$PostsEventCopyWithImpl<$Res, _$AddPosts>
+    implements _$$AddPostsCopyWith<$Res> {
+  __$$AddPostsCopyWithImpl(_$AddPosts _value, $Res Function(_$AddPosts) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AddPosts implements AddPosts {
+  const _$AddPosts();
+
+  @override
+  String toString() {
+    return 'PostsEvent.addPosts()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AddPosts);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getPosts,
+    required TResult Function() addPosts,
+  }) {
+    return addPosts();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getPosts,
+    TResult? Function()? addPosts,
+  }) {
+    return addPosts?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getPosts,
+    TResult Function()? addPosts,
+    required TResult orElse(),
+  }) {
+    if (addPosts != null) {
+      return addPosts();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(GetPosts value) getPosts,
+    required TResult Function(AddPosts value) addPosts,
+  }) {
+    return addPosts(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(GetPosts value)? getPosts,
+    TResult? Function(AddPosts value)? addPosts,
+  }) {
+    return addPosts?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(GetPosts value)? getPosts,
+    TResult Function(AddPosts value)? addPosts,
+    required TResult orElse(),
+  }) {
+    if (addPosts != null) {
+      return addPosts(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddPosts implements PostsEvent {
+  const factory AddPosts() = _$AddPosts;
 }
 
 /// @nodoc

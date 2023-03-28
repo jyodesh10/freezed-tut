@@ -35,6 +35,11 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
           emit(const PostsState.errorState("Error Occured") );
         }
       }
+
+      if(event is AddPosts){
+        
+      }
     });
+
   }
 }
